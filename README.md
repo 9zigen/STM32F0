@@ -6,10 +6,10 @@ Contact me if there is any problems. All examples were tested with STM32L100-Dis
 
 1. GPIO: initialize GPIO with single function (e.g. without creating and filling gpio structure).
 Example: 
-	gpio_pinSetup(GPIOC, GPIO_Pin_9, GPIO_Mode_OUT, GPIO_OType_PP, GPIO_PuPd_NOPULL, GPIO_Speed_40MHz);
-	gpio_pinSetup_AF(GPIOA, GPIO_Pin_2, GPIO_AF_TIM9, GPIO_OType_PP, GPIO_PuPd_UP, GPIO_Speed_2MHz);
+	gpio_pinSetup(GPIOC, GPIO_Pin_9, GPIO_Mode_OUT, GPIO_OType_PP, GPIO_PuPd_NOPULL, GPIO_Speed_50MHz);
+	gpio_pinSetup_AF(GPIOA, GPIO_Pin_2, GPIO_AF_0, GPIO_OType_PP, GPIO_PuPd_UP, GPIO_Speed_10MHz);
 Works also for setting interrupt pins.
-	gpio_pinSetup(GPIOC, GPIO_Pin_4, GPIO_Mode_IN, GPIO_OType_PP, GPIO_PuPd_UP, GPIO_Speed_40MHz);
+	gpio_pinSetup(GPIOC, GPIO_Pin_4, GPIO_Mode_IN, GPIO_OType_PP, GPIO_PuPd_UP, GPIO_Speed_50MHz);
 	gpio_pinSetup_interrupt(GPIOC, GPIO_Pin_4, EXTI_Trigger_Falling, 0,);		
 
 2. MILLIS: Function for initializing systick to create Arduino-like millis function.
